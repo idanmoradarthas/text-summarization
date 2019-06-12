@@ -1,0 +1,2 @@
+universal-sentence-encoder-model: https://tfhub.dev/google/universal-sentence-encoder-large/3
+spacy-module: en_core_web_sm
