@@ -1,6 +1,6 @@
 import pandas
 
-from wrappers.tensorflow_wrapper import TensorflowWrapper
+from wrappers.tensorflow_wrapper import TensorFlowWrapper
 
 
 def test_append_scores():
@@ -12,7 +12,7 @@ def test_append_scores():
                                         "Roughly, the longer the more 'diluted' the embedding will be."]],
                                       columns=["sent_1", "sent_2"])
 
-    tensorflow_wrapper = TensorflowWrapper("https://tfhub.dev/google/universal-sentence-encoder-large/3")
+    tensorflow_wrapper = TensorFlowWrapper("https://tfhub.dev/google/universal-sentence-encoder-large/3")
 
     tensorflow_wrapper.append_scores(sentence_pairs)
     tensorflow_wrapper.close()

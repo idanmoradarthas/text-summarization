@@ -24,6 +24,13 @@ def sentence_pairing(sentences: List[str]) -> pandas.DataFrame:
 
 
 def sentence_rank_with_page_rank(sentence_pairs_with_score: pandas.DataFrame) -> pandas.DataFrame:
+    """
+    Rank the sentences based on their similarity score to each other using page-rank algorithm and output their
+    new scores.
+    :param sentence_pairs_with_score: DataFrame with the columns ["sent_1", "sent_2", "score"] where each row is a
+        paired sentences with their initial similarity score.
+    :return: DataFrame with the columns ["sentence", "rank"] where each sentence has its rank.
+    """
     sentences = set()
     sentences.update(sentence_pairs_with_score["sent_1"].tolist())
     sentences.update(sentence_pairs_with_score["sent_2"].tolist())
@@ -61,6 +68,14 @@ def sentence_rank_with_page_rank(sentence_pairs_with_score: pandas.DataFrame) ->
 
 
 def sentence_sorter(df: pandas.DataFrame, top_n: int, sentences: List[str]) -> str:
+    """
+    Sort the sentences based on their rank and return the full summarized text in which the sentences appear as they are
+    in the given text.
+    :param df: DataFrame with the columns ["sentence", "rank"] where each sentence has its rank.
+    :param top_n: total number of sentences in the summarized text.
+    :param sentences: the given text tokenized into sentences.
+    :return:
+    """
     sorted_df = df.sort_values(by=["rank"], ascending=False)
     selected_sentences = sorted_df.head(top_n)["sentence"].tolist()
     result = [sentence for sentence in sentences if sentence in selected_sentences]

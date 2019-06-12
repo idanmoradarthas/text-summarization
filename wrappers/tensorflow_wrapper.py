@@ -3,7 +3,10 @@ import tensorflow
 import tensorflow_hub
 
 
-class TensorflowWrapper:
+class TensorFlowWrapper:
+    """
+    Wrapper object for TensorFlow graph and helps use it.
+    """
     def __init__(self, embedding_layer_hub_name: str) -> None:
         g = tensorflow.Graph()
         with g.as_default():
@@ -45,5 +48,7 @@ class TensorflowWrapper:
         sentence_pairs["score"] = scores
 
     def close(self):
-        print("close")
+        """
+        closes the TensorFlow session
+        """
         self._session.close()

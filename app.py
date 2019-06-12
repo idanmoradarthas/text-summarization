@@ -5,7 +5,7 @@ from flask import Flask, request, Response, jsonify
 
 from sentence_handler import sentence_pairing, sentence_rank_with_page_rank, sentence_sorter
 from wrappers.spacy_wrapper import SpacyWrapper
-from wrappers.tensorflow_wrapper import TensorflowWrapper
+from wrappers.tensorflow_wrapper import TensorFlowWrapper
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ with open(Path(__file__).parent.joinpath("properties.yaml"), "r") as f:
     properties = yaml.safe_load(f)
 
 spacy_wrapper = SpacyWrapper(properties["spacy-module"])
-tensorflow_wrapper = TensorflowWrapper(properties["universal-sentence-encoder-model"])
+tensorflow_wrapper = TensorFlowWrapper(properties["universal-sentence-encoder-model"])
 
 
 @app.route("/summarize/v1.0", methods=["POST"])

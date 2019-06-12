@@ -4,6 +4,9 @@ import spacy
 
 
 class SpacyWrapper:
+    """
+    Wrapper object that load SpaCy module and helps use it.
+    """
     def __init__(self, spacy_module: str) -> None:
         try:
             self._nlp = spacy.load(spacy_module)
