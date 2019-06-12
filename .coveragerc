@@ -1,0 +1,12 @@
+[report]
+omit =
+    */python?.?/*
+    */site-packages/nose/*
+    *__init__*
+    *tests/*
+    */.tox/*
+    */setup.py
+    app.py
+[run]
+parallel=True
+concurrency=multiprocessing
