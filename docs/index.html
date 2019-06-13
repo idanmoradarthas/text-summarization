@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>Welcome to text-summarization’s documentation! &#8212; text-summarization 1.0 documentation</title>
+    <link rel="stylesheet" href="static/alabaster.css" type="text/css"/>
+    <link rel="stylesheet" href="static/pygments.css" type="text/css"/>
+    <script type="text/javascript" id="documentation_options" data-url_root="./"
+            src="static/documentation_options.js"></script>
+    <script type="text/javascript" src="static/jquery.js"></script>
+    <script type="text/javascript" src="static/underscore.js"></script>
+    <script type="text/javascript" src="static/doctools.js"></script>
+    <script type="text/javascript" src="static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html"/>
+    <link rel="search" title="Search" href="search.html"/>
+    <link rel="next" title="Sentence Handler" href="sentencehandler.html"/>
+
+    <link rel="stylesheet" href="static/custom.css" type="text/css"/>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9"/>
+
+</head>
+<body>
+
+
+<div class="document">
+    <div class="documentwrapper">
+        <div class="bodywrapper">
+
+
+            <div class="body" role="main">
+
+                <div class="section" id="welcome-to-text-summarization-s-documentation">
+                    <h1>Welcome to text-summarization’s documentation!<a class="headerlink"
+                                                                         href="#welcome-to-text-summarization-s-documentation"
+                                                                         title="Permalink to this headline">¶</a></h1>
+                    <div class="toctree-wrapper compound">
+                        <p class="caption"><span class="caption-text">Contents:</span></p>
+                        <ul>
+                            <li class="toctree-l1"><a class="reference internal" href="sentencehandler.html">Sentence
+                                Handler</a></li>
+                            <li class="toctree-l1"><a class="reference internal" href="spacywrapper.html">SpaCy
+                                Wrapper</a></li>
+                            <li class="toctree-l1"><a class="reference internal" href="tensorflowwrapper.html">TensorFlow
+                                Wrapper</a></li>
+                        </ul>
+                    </div>
+                    <div class="section" id="introduction">
+                        <h2>Introduction<a class="headerlink" href="#introduction"
+                                           title="Permalink to this headline">¶</a></h2>
+                        <p>This project is an auto text summarization build in python with Spacy and Universal Sentence
+                            Encoder on Flask framework.</p>
+                        <p><cite>Automatic summarization is the process of shortening a text document with software, in
+                            order to create a summary
+                            with the major points of the original document.</cite> -Wikipedia</p>
+                        <p>This project was inspired by work of Praveen Dubey in
+                            <a class="reference external"
+                               href="https://towardsdatascience.com/understand-text-summarization-and-create-your-own-summarizer-in-python-b26a9f09fc70">Understand
+                                Text Summarization and create your own summarizer in python</a>.</p>
+                        <p>The summarization uses the Universal Sentence Encoder[1] with the deep learning framework of
+                            TensorFlow, SpaCy for
+                            linguistic and NetworkX for ranking. The project itself is a RestAPI script build with Flask
+                            framework.</p>
+                        <p>The algorithm steps are as follows:</p>
+                        <ol class="arabic simple">
+                            <li><p>Read the given text and splitting it into sentences using SpaCy.</p></li>
+                            <li><p>Generate sentences pairs cosine similarity score based on their dimensional vectors
+                                with TensorFlow graph and the Universal Sentence Encoder as an embedding layer (see
+                                network architecture picture below).</p></li>
+                            <li><p>Generate similarity matrix across the sentences and rank them using NetworkX
+                                implementation of PageRank.</p></li>
+                            <li><p>Sort the rank sentences and pick the top ones according the user’s input.</p></li>
+                        </ol>
+                        <div class="section" id="tensorflow-graph-with-the-universal-sentence-encoder">
+                            <h3>TensorFlow graph with the Universal Sentence Encoder<a class="headerlink"
+                                                                                       href="#tensorflow-graph-with-the-universal-sentence-encoder"
+                                                                                       title="Permalink to this headline">¶</a>
+                            </h3>
+                            <div class="figure align-center">
+                                <img alt="_images/graph_run=.png" src="images/graph_run=.png"/>
+                            </div>
+                        </div>
+                        <div class="section" id="references">
+                            <h3>References<a class="headerlink" href="#references"
+                                             title="Permalink to this headline">¶</a></h3>
+                            <p>[1] Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St. John,
+                                Noah Constant, Mario
+                                Guajardo-Céspedes, Steve Yuan, Chris Tar, Yun-Hsuan Sung, Brian Strope, Ray Kurzweil.
+                                <a class="reference external" href="https://arxiv.org/abs/1803.11175">Universal Sentence
+                                    Encoder</a>. arXiv:1803.11175, 2018.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section" id="indices-and-tables">
+                    <h1>Indices and tables<a class="headerlink" href="#indices-and-tables"
+                                             title="Permalink to this headline">¶</a></h1>
+                    <ul class="simple">
+                        <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a>
+                        </p></li>
+                        <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a>
+                        </p></li>
+                        <li><p><a class="reference internal" href="search.html"><span
+                                class="std std-ref">Search Page</span></a></p></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <h1 class="logo"><a href="#">text-summarization</a></h1>
+
+
+            <h3>Navigation</h3>
+            <p class="caption"><span class="caption-text">Contents:</span></p>
+            <ul>
+                <li class="toctree-l1"><a class="reference internal" href="sentencehandler.html">Sentence Handler</a>
+                </li>
+                <li class="toctree-l1"><a class="reference internal" href="spacywrapper.html">SpaCy Wrapper</a></li>
+                <li class="toctree-l1"><a class="reference internal" href="tensorflowwrapper.html">TensorFlow
+                    Wrapper</a></li>
+            </ul>
+
+            <div class="relations">
+                <h3>Related Topics</h3>
+                <ul>
+                    <li><a href="#">Documentation overview</a>
+                        <ul>
+                            <li>Next: <a href="sentencehandler.html" title="next chapter">Sentence Handler</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="searchbox" style="display: none" role="search">
+                <h3 id="searchlabel">Quick search</h3>
+                <div class="searchformwrapper">
+                    <form class="search" action="search.html" method="get">
+                        <input type="text" name="q" aria-labelledby="searchlabel"/>
+                        <input type="submit" value="Go"/>
+                    </form>
+                </div>
+            </div>
+            <script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+        </div>
+    </div>
+    <div class="clearer"></div>
+</div>
+<div class="footer">
+    &copy;2019, Idan Morad.
+
+    |
+    Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.0</a>
+    &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+
+    |
+    <a href="_sources/index.rst.txt"
+       rel="nofollow">Page source</a>
+</div>
+
+
+</body>
+</html>
