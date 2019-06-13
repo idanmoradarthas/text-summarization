@@ -1,8 +1,8 @@
 # Auto Text Summarization
 
 ```
-Automatic summarization is the process of shortening a text document with software, in order to create a summary with 
-the major points of the original document.
+Automatic summarization is the process of shortening a text document with software, in order to create a summary 
+with the major points of the original document.
 ```
 --Wikipedia
 
@@ -40,7 +40,7 @@ Request Should be constructed as such and send in method POST:
 ```json
 {
   "doc": text,
-  "summarized sentences length": number of sentences that will comprized the summary
+  "summarized sentences length": number of sentences that will comprised the summary
 }
 ```
 where each document will be in separate brackets.
@@ -98,6 +98,7 @@ was developed to provide job ready skills to programmers who wanted to hone thei
 with a series of online courses which featured hands-on labs and expert instructors as well.
 ```
 
+## References
 [1] Daniel Cer, Yinfei Yang, Sheng-yi Kong, Nan Hua, Nicole Limtiaco, Rhomni St. John, Noah Constant, Mario 
 Guajardo-Céspedes, Steve Yuan, Chris Tar, Yun-Hsuan Sung, Brian Strope, Ray Kurzweil. 
 [Universal Sentence Encoder](https://arxiv.org/abs/1803.11175). arXiv:1803.11175, 2018.
