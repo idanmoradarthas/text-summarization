@@ -79,3 +79,4 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 /text-summarization.iml
+/sphinx-doc/*

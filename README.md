@@ -1,5 +1,7 @@
 # Auto Text Summarization
 
+[full code documentation](https://idanmoradarthas.github.io/text-summarization/)
+
 ```
 Automatic summarization is the process of shortening a text document with software, in order to create a summary 
 with the major points of the original document.

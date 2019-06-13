@@ -22,6 +22,7 @@ class SpacyWrapper:
             sentence_tokenizer("Hello, world. Here are two sentences.")
         will output:
             ['Hello, world.', 'Here are two sentences.']
+
         :param text: raw text to split into sentences
         :return: list of strings, each string is a sentence.
         """

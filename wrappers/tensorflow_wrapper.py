@@ -49,6 +49,6 @@ class TensorFlowWrapper:
 
     def close(self):
         """
-        closes the TensorFlow session
+        closes the TensorFlow session.
         """
         self._session.close()
