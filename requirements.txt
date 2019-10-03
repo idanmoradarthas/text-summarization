@@ -2,8 +2,8 @@ flask==1.0.3
 spacy==2.0.12
 pyyaml==5.1
 tensorflow==1.13.1
-tensorflow-hub==0.4.0
-numpy==1.16.4
+tensorflow-hub>=0.4.0
+numpy>=1.16.4
 pandas==0.24.2
 networkx==2.3
 scikit-learn==0.21.2
