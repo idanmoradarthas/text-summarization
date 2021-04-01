@@ -1,6 +1,6 @@
 flask==1.0.3
 spacy==2.0.12
-pyyaml==5.1
+pyyaml==5.4
 tensorflow==1.15.4
 tensorflow-hub>=0.4.0
 numpy>=1.16.4
