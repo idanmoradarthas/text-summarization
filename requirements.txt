@@ -1,4 +1,4 @@
-flask==1.0.3
+flask==2.3.2
 spacy==2.0.12
 pyyaml==5.4
 tensorflow==1.15.4
